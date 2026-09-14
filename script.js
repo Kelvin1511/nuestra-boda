@@ -111,7 +111,7 @@ function updateMusicButtonUI() {
 }
 
 document.getElementById('music-btn').addEventListener('click', function (e) {
-    e.stopPropagation(); // Prevent document click handler override
+    e.stopPropagation();
     if (!player || typeof player.playVideo !== 'function') return;
 
     if (!isPlaying) {
