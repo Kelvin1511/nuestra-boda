@@ -1,7 +1,7 @@
 // Target date set for October 30, 2026
 const weddingDate = new Date("October 30, 2026 00:00:00").getTime();
 
-const updateCountdown = setInterval(function () {
+const updateCountdown = setInterval(function() {
     const now = new Date().getTime();
     const distance = weddingDate - now;
 
@@ -30,7 +30,7 @@ const dots = document.querySelectorAll(".dot");
 
 function showSlide(index) {
     if (slides.length === 0) return;
-
+    
     if (index >= slides.length) currentSlideIndex = 0;
     else if (index < 0) currentSlideIndex = slides.length - 1;
     else currentSlideIndex = index;
@@ -57,20 +57,22 @@ setInterval(() => {
     moveSlide(1);
 }, 4000);
 
-// YouTube Music Player Logic with Autoplay
+// YouTube Music Player Logic - Bruno Mars
 let player;
 let isPlaying = false;
+
+const songID = 'rIBRcQdzWQs'; 
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('youtube-player-container', {
         height: '0',
         width: '0',
-        videoId: 'QgaTQ5-XfMM',
+        videoId: songID,
         playerVars: {
             'autoplay': 1,
             'controls': 0,
             'loop': 1,
-            'playlist': 'QgaTQ5-XfMM'
+            'playlist': songID
         },
         events: {
             'onReady': onPlayerReady
@@ -79,11 +81,9 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-    // Attempt automatic playback
     event.target.playVideo();
     isPlaying = true;
 
-    // Trigger playback on first user interaction if browser blocked initial autoplay
     const enableAudio = () => {
         if (player && typeof player.playVideo === 'function') {
             player.playVideo();
@@ -110,7 +110,7 @@ function updateMusicButtonUI() {
     }
 }
 
-document.getElementById('music-btn').addEventListener('click', function (e) {
+document.getElementById('music-btn').addEventListener('click', function(e) {
     e.stopPropagation();
     if (!player || typeof player.playVideo !== 'function') return;
 
