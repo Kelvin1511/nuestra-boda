@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boda de Alejandra & Kevin</title>
-    <!-- Fuentes elegantes de Google Fonts -->
+    <title>Alejandra & Kevin's Wedding</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,70 +16,68 @@
 
 <body>
 
-    <!-- Encabezado -->
+    <!-- Header -->
     <header>
-        <div class="cursive-title">Nuestra Boda</div>
+        <div class="cursive-title">Our Wedding</div>
         <h1>Alejandra & Kevin</h1>
-        <div class="date-subtitle">30 de Octubre de 2026</div>
+        <div class="date-subtitle">October 30, 2026</div>
     </header>
 
     <div class="container">
 
-        <!-- Cuenta Regresiva -->
+        <!-- Countdown Section -->
         <section class="countdown-section">
-            <h2 class="countdown-title">El Gran Día Se Acerca</h2>
+            <h2 class="countdown-title">The Big Day Is Approaching</h2>
             <div class="timer">
                 <div class="time-box">
                     <span class="time-number" id="days">00</span>
-                    <span class="time-label">Días</span>
+                    <span class="time-label">Days</span>
                 </div>
                 <div class="time-box">
                     <span class="time-number" id="hours">00</span>
-                    <span class="time-label">Horas</span>
+                    <span class="time-label">Hours</span>
                 </div>
                 <div class="time-box">
                     <span class="time-number" id="minutes">00</span>
-                    <span class="time-label">Minutos</span>
+                    <span class="time-label">Minutes</span>
                 </div>
                 <div class="time-box">
                     <span class="time-number" id="seconds">00</span>
-                    <span class="time-label">Segundos</span>
+                    <span class="time-label">Seconds</span>
                 </div>
             </div>
         </section>
 
-        <!-- Espacio para la Foto de los Novios -->
+        <!-- Couple Photo Section -->
         <section class="photo-section">
             <h2 class="section-title">Alejandra & Kevin</h2>
 
-            <!-- Marco temporal hasta que tengan la foto -->
+            <!-- Placeholder frame -->
             <div class="photo-placeholder" id="placeholder-foto">
-                <p>Aquí irá nuestra foto especial<br><small>(Próximamente)</small></p>
+                <p>Our special photo will be here<br><small>(Coming Soon)</small></p>
             </div>
 
-            <!-- Descomenta esta línea cuando tengas tu foto guardada como 'foto-pareja.jpg' en la misma carpeta: -->
-            <!-- <img src="foto-pareja.jpg" alt="Alejandra y Kevin" class="couple-photo"> -->
+            <!-- Uncomment this line when you have your photo saved as 'foto-pareja.jpg': -->
+            <!-- <img src="foto-pareja.jpg" alt="Alejandra and Kevin" class="couple-photo"> -->
         </section>
 
-        <!-- Sección Código QR / Subida de Fotos -->
+        <!-- QR Code / Photo Upload Section -->
         <section class="qr-section">
-            <h2 class="section-title">¡Comparte tus Recuerdos!</h2>
-            <p class="qr-description">Escanea el código QR desde tu celular o usa el botón para subir todas las fotos y
-                videos desde tu galería directamente a nuestro álbum.</p>
+            <h2 class="section-title">Share Your Memories!</h2>
+            <p class="qr-description">Scan the QR code with your phone camera or use the button below to upload all your
+                photos and videos directly from your gallery to our album.</p>
 
             <div class="qr-card">
                 <div class="qr-code">
-                    <!-- Código QR generado dinámicamente apuntando a tu álbum de Google Photos -->
                     <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://photos.app.goo.gl/Y6B92G6gjujkyVwH6"
-                        alt="Código QR para subir fotos">
+                        alt="QR code to upload photos">
                 </div>
-                <p class="qr-instructions">Apunta tu cámara aquí para abrir tu galería</p>
+                <p class="qr-instructions">Point your camera here to open your gallery</p>
             </div>
 
             <div class="btn-container">
-                <!-- Enlace directo a tu álbum de Google Photos -->
                 <a href="https://photos.app.goo.gl/Y6B92G6gjujkyVwH6" target="_blank" class="upload-btn">
-                    📸 Abrir Galería y Subir Fotos
+                    📸 Open Gallery & Upload Photos
                 </a>
             </div>
         </section>
@@ -87,7 +85,7 @@
     </div>
 
     <footer>
-        <p>Alejandra & Kevin — 30 de Octubre de 2026</p>
+        <p>Alejandra & Kevin — October 30, 2026</p>
     </footer>
 
     <script src="script.js"></script>
