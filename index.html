@@ -65,20 +65,22 @@
         <section class="qr-section">
             <h2 class="section-title">¡Comparte tus Recuerdos!</h2>
             <p class="qr-description">Escanea el código QR desde tu celular o usa el botón para subir todas las fotos y
-                videos que tomes durante la boda.</p>
+                videos desde tu galería directamente a nuestro álbum.</p>
 
             <div class="qr-card">
                 <div class="qr-code">
-                    <!-- QR generado que apunta a un enlace (puedes reemplazar la URL del QR con tu enlace de Google Drive / Photos) -->
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://drive.google.com"
+                    <!-- Código QR generado dinámicamente apuntando a tu álbum de Google Photos -->
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://photos.app.goo.gl/Y6B92G6gjujkyVwH6"
                         alt="Código QR para subir fotos">
                 </div>
-                <p class="qr-instructions">Apunta tu cámara aquí para subir tus fotos</p>
+                <p class="qr-instructions">Apunta tu cámara aquí para abrir tu galería</p>
             </div>
 
             <div class="btn-container">
-                <!-- Reemplaza '#' con la URL de tu carpeta de Google Drive, Google Photos o Dropbox -->
-                <a href="https://drive.google.com" target="_blank" class="upload-btn">Subir Fotos Aquí</a>
+                <!-- Enlace directo a tu álbum de Google Photos -->
+                <a href="https://photos.app.goo.gl/Y6B92G6gjujkyVwH6" target="_blank" class="upload-btn">
+                    📸 Abrir Galería y Subir Fotos
+                </a>
             </div>
         </section>
 
