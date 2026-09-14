@@ -1,0 +1,242 @@
+:root {
+    --color-terracotta: #B85B35;
+    --color-burgundy: #6B2D39;
+    --color-gold: #D4A359;
+    --color-cream: #FAF6F0;
+    --color-warm-white: #FFFFFF;
+    --color-dark-text: #3A2E2B;
+    --color-soft-brown: #8C6D62;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-cream);
+    color: var(--color-dark-text);
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(rgba(250, 246, 240, 0.85), rgba(250, 246, 240, 0.85)),
+        radial-gradient(circle, rgba(212, 163, 89, 0.15) 0%, rgba(184, 91, 53, 0.1) 100%);
+    border-bottom: 2px solid var(--color-gold);
+}
+
+.cursive-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.8rem;
+    color: var(--color-burgundy);
+    margin-bottom: 5px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-terracotta);
+    margin-bottom: 10px;
+}
+
+.date-subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    color: var(--color-soft-brown);
+    text-transform: uppercase;
+}
+
+/* Contenedor Principal */
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cuenta Regresiva */
+.countdown-section {
+    text-align: center;
+    margin: 40px 0;
+    padding: 35px 20px;
+    background-color: var(--color-burgundy);
+    color: var(--color-cream);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(107, 45, 57, 0.15);
+}
+
+.countdown-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: var(--color-gold);
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px 20px;
+    border-radius: 8px;
+    min-width: 85px;
+    border: 1px solid var(--color-gold);
+}
+
+.time-number {
+    font-size: 2.4rem;
+    font-weight: 500;
+    display: block;
+    color: var(--color-cream);
+}
+
+.time-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.85;
+}
+
+/* Sección Foto de los Novios */
+.photo-section {
+    background-color: var(--color-warm-white);
+    margin: 40px 0;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    border: 1px solid rgba(212, 163, 89, 0.3);
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    color: var(--color-terracotta);
+    margin-bottom: 20px;
+}
+
+.photo-placeholder {
+    width: 100%;
+    max-width: 480px;
+    height: 320px;
+    margin: 0 auto;
+    border: 2px dashed var(--color-gold);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-cream);
+    color: var(--color-soft-brown);
+    font-style: italic;
+}
+
+.couple-photo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+/* Sección QR y Galería */
+.qr-section {
+    background-color: var(--color-warm-white);
+    margin: 40px 0;
+    padding: 40px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(184, 91, 53, 0.2);
+}
+
+.qr-description {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    color: var(--color-dark-text);
+}
+
+.qr-card {
+    background-color: var(--color-cream);
+    border: 2px solid var(--color-gold);
+    border-radius: 12px;
+    padding: 25px;
+    display: inline-block;
+    margin: 10px 0 25px;
+}
+
+.qr-code img {
+    width: 180px;
+    height: 180px;
+    border-radius: 6px;
+}
+
+.qr-instructions {
+    font-size: 0.85rem;
+    color: var(--color-soft-brown);
+    margin-top: 10px;
+}
+
+.btn-container {
+    margin-top: 10px;
+}
+
+.upload-btn {
+    display: inline-block;
+    background-color: var(--color-terracotta);
+    color: white;
+    padding: 14px 35px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(184, 91, 53, 0.3);
+}
+
+.upload-btn:hover {
+    background-color: var(--color-burgundy);
+    transform: translateY(-2px);
+}
+
+/* Pie de Página */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--color-soft-brown);
+    font-size: 0.85rem;
+}
+
+/* Diseño Adaptable para Celulares */
+@media (max-width: 600px) {
+    .cursive-title {
+        font-size: 3rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .timer {
+        gap: 10px;
+    }
+
+    .time-box {
+        min-width: 70px;
+        padding: 10px 8px;
+    }
+
+    .time-number {
+        font-size: 1.8rem;
+    }
+}

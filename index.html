@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda de Alejandra & Kevin</title>
+    <!-- Fuentes elegantes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="cursive-title">Nuestra Boda</div>
+        <h1>Alejandra & Kevin</h1>
+        <div class="date-subtitle">30 de Octubre de 2026</div>
+    </header>
+
+    <div class="container">
+
+        <!-- Cuenta Regresiva -->
+        <section class="countdown-section">
+            <h2 class="countdown-title">El Gran Día Se Acerca</h2>
+            <div class="timer">
+                <div class="time-box">
+                    <span class="time-number" id="days">00</span>
+                    <span class="time-label">Días</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-number" id="hours">00</span>
+                    <span class="time-label">Horas</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-number" id="minutes">00</span>
+                    <span class="time-label">Minutos</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-number" id="seconds">00</span>
+                    <span class="time-label">Segundos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Espacio para la Foto de los Novios -->
+        <section class="photo-section">
+            <h2 class="section-title">Alejandra & Kevin</h2>
+
+            <!-- Marco temporal hasta que tengan la foto -->
+            <div class="photo-placeholder" id="placeholder-foto">
+                <p>Aquí irá nuestra foto especial<br><small>(Próximamente)</small></p>
+            </div>
+
+            <!-- Descomenta esta línea cuando tengas tu foto guardada como 'foto-pareja.jpg' en la misma carpeta: -->
+            <!-- <img src="foto-pareja.jpg" alt="Alejandra y Kevin" class="couple-photo"> -->
+        </section>
+
+        <!-- Sección Código QR / Subida de Fotos -->
+        <section class="qr-section">
+            <h2 class="section-title">¡Comparte tus Recuerdos!</h2>
+            <p class="qr-description">Escanea el código QR desde tu celular o usa el botón para subir todas las fotos y
+                videos que tomes durante la boda.</p>
+
+            <div class="qr-card">
+                <div class="qr-code">
+                    <!-- QR generado que apunta a un enlace (puedes reemplazar la URL del QR con tu enlace de Google Drive / Photos) -->
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://drive.google.com"
+                        alt="Código QR para subir fotos">
+                </div>
+                <p class="qr-instructions">Apunta tu cámara aquí para subir tus fotos</p>
+            </div>
+
+            <div class="btn-container">
+                <!-- Reemplaza '#' con la URL de tu carpeta de Google Drive, Google Photos o Dropbox -->
+                <a href="https://drive.google.com" target="_blank" class="upload-btn">Subir Fotos Aquí</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Alejandra & Kevin — 30 de Octubre de 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
