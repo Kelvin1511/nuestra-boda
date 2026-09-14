@@ -57,7 +57,7 @@ setInterval(() => {
     moveSlide(1);
 }, 4000);
 
-// YouTube Music Player Logic (The Piano Guys - A Thousand Years)
+// YouTube Music Player Logic with Autoplay
 let player;
 let isPlaying = false;
 
@@ -65,31 +65,61 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('youtube-player-container', {
         height: '0',
         width: '0',
-        videoId: 'QgaTQ5-XfMM', // Piano & Cello cover
+        videoId: 'QgaTQ5-XfMM',
         playerVars: {
-            'autoplay': 0,
+            'autoplay': 1,
             'controls': 0,
             'loop': 1,
             'playlist': 'QgaTQ5-XfMM'
+        },
+        events: {
+            'onReady': onPlayerReady
         }
     });
 }
 
-document.getElementById('music-btn').addEventListener('click', function () {
+function onPlayerReady(event) {
+    // Attempt automatic playback
+    event.target.playVideo();
+    isPlaying = true;
+
+    // Trigger playback on first user interaction if browser blocked initial autoplay
+    const enableAudio = () => {
+        if (player && typeof player.playVideo === 'function') {
+            player.playVideo();
+            isPlaying = true;
+            updateMusicButtonUI();
+        }
+        document.removeEventListener('click', enableAudio);
+        document.removeEventListener('touchstart', enableAudio);
+    };
+
+    document.addEventListener('click', enableAudio);
+    document.addEventListener('touchstart', enableAudio);
+}
+
+function updateMusicButtonUI() {
     const btnText = document.getElementById('music-text');
     const btnIcon = document.getElementById('music-icon');
+    if (isPlaying) {
+        btnText.innerText = "Pause Music";
+        btnIcon.innerText = "⏸️";
+    } else {
+        btnText.innerText = "Play Music";
+        btnIcon.innerText = "🎵";
+    }
+}
 
+document.getElementById('music-btn').addEventListener('click', function (e) {
+    e.stopPropagation(); // Prevent document click handler override
     if (!player || typeof player.playVideo !== 'function') return;
 
     if (!isPlaying) {
         player.playVideo();
         isPlaying = true;
-        btnText.innerText = "Pause Music";
-        btnIcon.innerText = "⏸️";
     } else {
         player.pauseVideo();
         isPlaying = false;
-        btnText.innerText = "Play Background Music";
-        btnIcon.innerText = "🎵";
     }
+    updateMusicButtonUI();
 });
