@@ -25,6 +25,15 @@
 
     <div class="container">
 
+        <!-- Music Control Widget -->
+        <section class="music-section">
+            <button id="music-btn" class="music-btn">
+                <span id="music-icon">🎵</span> <span id="music-text">Play Background Music</span>
+            </button>
+            <!-- Hidden YouTube Player Container -->
+            <div id="youtube-player-container" style="display:none;"></div>
+        </section>
+
         <!-- Countdown Section -->
         <section class="countdown-section">
             <h2 class="countdown-title">The Big Day Is Approaching</h2>
@@ -48,17 +57,35 @@
             </div>
         </section>
 
-        <!-- Couple Photo Section -->
+        <!-- Dynamic Photo Carousel Section -->
         <section class="photo-section">
             <h2 class="section-title">Alejandra & Kevin</h2>
 
-            <!-- Placeholder frame -->
-            <div class="photo-placeholder" id="placeholder-foto">
-                <p>Our special photo will be here<br><small>(Coming Soon)</small></p>
-            </div>
+            <div class="carousel-container">
+                <div class="carousel-slide active">
+                    <img src="images/foto1.jpg" alt="Alejandra & Kevin 1"
+                        onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400/FAF6F0/8C6D62?text=Add+images/foto1.jpg';">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/foto2.jpg" alt="Alejandra & Kevin 2"
+                        onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400/FAF6F0/8C6D62?text=Add+images/foto2.jpg';">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/foto3.jpg" alt="Alejandra & Kevin 3"
+                        onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400/FAF6F0/8C6D62?text=Add+images/foto3.jpg';">
+                </div>
 
-            <!-- Uncomment this line when you have your photo saved as 'foto-pareja.jpg': -->
-            <!-- <img src="foto-pareja.jpg" alt="Alejandra and Kevin" class="couple-photo"> -->
+                <!-- Navigation Controls -->
+                <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
+
+                <!-- Indicator Dots -->
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
         </section>
 
         <!-- QR Code / Photo Upload Section -->
@@ -88,6 +115,8 @@
         <p>Alejandra & Kevin — October 30, 2026</p>
     </footer>
 
+    <!-- YouTube IFrame Player API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="script.js"></script>
 </body>
 
