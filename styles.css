@@ -21,7 +21,7 @@ body {
     line-height: 1.6;
 }
 
-/* Encabezado */
+/* Header */
 header {
     text-align: center;
     padding: 60px 20px 40px;
@@ -53,17 +53,41 @@ h1 {
     text-transform: uppercase;
 }
 
-/* Contenedor Principal */
+/* Container */
 .container {
     max-width: 850px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Cuenta Regresiva */
+/* Music Player Section */
+.music-section {
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.music-btn {
+    background-color: var(--color-gold);
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    font-size: 0.95rem;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.music-btn:hover {
+    background-color: var(--color-terracotta);
+    transform: translateY(-2px);
+}
+
+/* Countdown Section */
 .countdown-section {
     text-align: center;
-    margin: 40px 0;
+    margin: 30px 0 40px;
     padding: 35px 20px;
     background-color: var(--color-burgundy);
     color: var(--color-cream);
@@ -107,7 +131,7 @@ h1 {
     opacity: 0.85;
 }
 
-/* Sección Foto de los Novios */
+/* Carousel Section */
 .photo-section {
     background-color: var(--color-warm-white);
     margin: 40px 0;
@@ -125,31 +149,79 @@ h1 {
     margin-bottom: 20px;
 }
 
-.photo-placeholder {
-    width: 100%;
-    max-width: 480px;
-    height: 320px;
+.carousel-container {
+    position: relative;
+    max-width: 600px;
     margin: 0 auto;
-    border: 2px dashed var(--color-gold);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-cream);
-    color: var(--color-soft-brown);
-    font-style: italic;
-}
-
-.couple-photo {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
 }
 
-/* Sección QR y Galería */
+.carousel-slide {
+    display: none;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.carousel-dots {
+    margin-top: 15px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+    background-color: var(--color-terracotta);
+}
+
+/* QR Section */
 .qr-section {
     background-color: var(--color-warm-white);
     margin: 40px 0;
@@ -209,7 +281,7 @@ h1 {
     transform: translateY(-2px);
 }
 
-/* Pie de Página */
+/* Footer */
 footer {
     text-align: center;
     padding: 30px;
@@ -217,7 +289,7 @@ footer {
     font-size: 0.85rem;
 }
 
-/* Diseño Adaptable para Celulares */
+/* Responsive */
 @media (max-width: 600px) {
     .cursive-title {
         font-size: 3rem;
@@ -238,5 +310,9 @@ footer {
 
     .time-number {
         font-size: 1.8rem;
+    }
+
+    .carousel-slide img {
+        height: 260px;
     }
 }
